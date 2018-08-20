@@ -5,12 +5,9 @@ class Anagram
   end
 
   def match(array)
-    @anagrams = []
-    array.map do |match|
+    array.select do |match|
       if match.chars.sort == @word.chars.sort
-        @anagrams << match
       end
     end
-    @anagrams
   end
 end
